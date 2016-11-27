@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/head_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/main_xiala" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" >
+
+            <ImageView
+                android:id="@+id/pull_icon_one"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/main_xiala" />
+
+            <ImageView
+                android:id="@+id/pull_icon"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="60dp"
+                android:background="@mipmap/main_xiala"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/refreshing_icon"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="60dp"
+                android:background="@mipmap/main_xiala"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/state_tv"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_below="@+id/pull_icon_one"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="5dp"
+                android:text="@string/pull_to_refresh"
+                android:textColor="#60C0BD"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/state_iv"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp"
+                android:layout_toLeftOf="@id/state_tv"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

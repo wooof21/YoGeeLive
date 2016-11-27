@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        android:id="@+id/content"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_floating_material_dark"
+        >
+
+        <com.qiniu.pili.droid.streaming.widget.AspectFrameLayout
+                android:id="@+id/cameraPreview_afl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentTop="true">
+
+                <android.opengl.GLSurfaceView
+                        android:id="@+id/cameraPreview_surfaceView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"/>
+
+        </com.qiniu.pili.droid.streaming.widget.AspectFrameLayout>
+
+        <TextView
+                android:id="@+id/camera_cameraswitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="摄像头 后"
+                android:textSize="20sp"
+                android:textColor="#ffffff"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                />
+
+        <TextView
+                android:id="@+id/camera_lightswitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="关灯"
+                android:textSize="20sp"
+                android:textColor="#ffffff"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="60dp"
+                />
+
+        <LinearLayout
+                android:id="@+id/camera_lllllllll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentBottom="true"
+                >
+                <FrameLayout
+                        android:id="@+id/camera_bottom_fl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#00000000"
+                        android:layout_marginBottom="10dp"
+                        >
+                        <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_gravity="center_vertical"
+                                >
+                                <ImageView
+                                        android:id="@+id/bottom_chat"
+                                        android:layout_width="35dp"
+                                        android:layout_height="35dp"
+                                        android:src="@mipmap/ic_launcher"
+                                        android:layout_marginLeft="15dp"
+                                        />
+                                <ImageView
+                                        android:layout_width="35dp"
+                                        android:layout_height="35dp"
+                                        android:src="@mipmap/ic_launcher"
+                                        android:layout_marginLeft="15dp"
+                                        />
+                        </LinearLayout>
+
+                        <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_gravity="center_vertical|right"
+                                >
+                                <ImageView
+                                        android:layout_width="35dp"
+                                        android:layout_height="35dp"
+                                        android:src="@mipmap/ic_launcher"
+                                        android:layout_marginLeft="15dp"
+                                        />
+                                <ImageView
+                                        android:layout_width="35dp"
+                                        android:layout_height="35dp"
+                                        android:src="@mipmap/ic_launcher"
+                                        android:layout_marginLeft="15dp"
+                                        />
+                                <ImageView
+                                        android:layout_width="35dp"
+                                        android:layout_height="35dp"
+                                        android:src="@mipmap/ic_launcher"
+                                        android:layout_marginLeft="15dp"
+                                        android:layout_marginRight="15dp"
+                                        />
+                        </LinearLayout>
+                </FrameLayout>
+
+
+
+                <LinearLayout
+                        android:id="@+id/camera_msg_ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="#000000"
+                        android:visibility="gone"
+                        >
+                        <EditText
+                                android:id="@+id/camera_stream_et"
+                                android:layout_width="240dp"
+                                android:layout_height="wrap_content"
+                                android:hint="发送消息"
+                                android:padding="10dp"
+                                android:background="@drawable/corner_bg_white"
+                                android:layout_margin="5dp"
+                                />
+
+                        <TextView
+                                android:id="@+id/camera_stream_send"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="发送"
+                                android:textSize="20sp"
+                                android:layout_gravity="center"
+                                android:paddingBottom="8dp"
+                                android:paddingTop="8dp"
+                                android:paddingLeft="15dp"
+                                android:paddingRight="15dp"
+                                android:background="@drawable/corner_bg_white"
+                                android:layout_margin="5dp"
+                                />
+                </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+                android:id="@+id/camera_stream_chat_list"
+                android:layout_width="200dp"
+                android:layout_height="300dp"
+                android:layout_above="@id/camera_lllllllll"
+                />
+
+        <library.tool.clm.UI.LikeLayout
+                android:id="@+id/camera_like"
+                android:layout_width="100dp"
+                android:layout_height="280dp"
+                android:layout_alignParentRight="true"
+                android:layout_above="@id/camera_lllllllll"
+                />
+
+</RelativeLayout>

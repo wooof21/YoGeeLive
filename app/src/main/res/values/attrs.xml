@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+        border_thickness         设置边框的宽度
+        border_inside_color     设置内边框的颜色
+        border_outside_color     设置外边框的颜色
+        内外边框如果只设置一个的话，则认为只显示一个边框。
+     -->
+    <declare-styleable name="RoundImageView">
+        <attr name="border_thickness" format="dimension" />
+        <attr name="border_inside_color" format="color" />
+        <attr name="border_outside_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="FlashView">
+        <attr name="effect">
+            <enum name="accordion" value="0" />
+            <enum name="cube" value="1" />
+            <enum name="def" value="2" />
+            <enum name="depthPage" value="3" />
+            <enum name="inRightDown" value="4" />
+            <enum name="inRightUp" value="5" />
+            <enum name="rotate" value="6" />
+            <enum name="zoomOutPage" value="7" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="CircleFlowIndicator">
+        <attr name="activeColor" format="color" />
+        <attr name="inactiveColor" format="color" />
+        <attr name="radius" format="dimension" />
+        <attr name="centered" format="boolean" />
+        <attr name="fadeOut" format="integer" />
+        <attr name="inactiveType">
+            <flag name="stroke" value="0" />
+            <flag name="fill" value="1" />
+        </attr>
+        <attr name="activeType">
+            <flag name="stroke" value="0" />
+            <flag name="fill" value="1" />
+        </attr>
+        <attr name="circleSeparation" format="dimension" />
+        <attr name="activeRadius" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="ViewFlow">
+        <attr name="sidebuffer" format="integer" />
+    </declare-styleable>
+</resources>
